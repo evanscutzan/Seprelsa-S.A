@@ -205,7 +205,255 @@ footer {
 <footer>
     © 2026 SEPRELSA - Todos los derechos reservados
 </footer>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEPRELSA</title>
 
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #eef3f7;
+}
+
+/* HERO */
+.hero {
+    background: url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc') center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 42px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.btn-main {
+    background: #25D366;
+    padding: 12px 25px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* NAV */
+nav {
+    background: #083b66;
+    text-align: center;
+    padding: 12px;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
+
+/* SECTIONS */
+section {
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    color: #0a4f8a;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #0a7f3f;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* FORM */
+.form-container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #0a7f3f;
+    color: white;
+    border: none;
+}
+
+/* TESTIMONIOS */
+.testimonial {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-style: italic;
+}
+
+/* FOOTER */
+footer {
+    background: #083b66;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    padding: 15px;
+    border-radius: 50%;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-content">
+        <h1>Expertos en Refrigeración y Electricidad</h1>
+        <p>Soluciones rápidas, seguras y garantizadas en Guatemala</p>
+        <a href="#contacto" class="btn-main">Solicitar Cotización</a>
+    </div>
+</div>
+
+<nav>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+    <h2>Servicios</h2>
+    <div class="grid">
+        <div class="card">❄️ Aire Acondicionado<br><small>Instalación y reparación</small></div>
+        <div class="card">🧊 Refrigeración<br><small>Cámaras y vitrinas</small></div>
+        <div class="card">⚡ Electricidad<br><small>Instalaciones seguras</small></div>
+        <div class="card">🏗️ Obra Gris<br><small>Mantenimiento general</small></div>
+    </div>
+</section>
+
+<!-- CONFIANZA -->
+<section>
+    <h2>¿Por qué elegirnos?</h2>
+    <div class="grid">
+        <div class="card">✔️ Atención rápida</div>
+        <div class="card">✔️ Garantía en trabajos</div>
+        <div class="card">✔️ Técnicos profesionales</div>
+    </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section>
+    <h2>Clientes satisfechos</h2>
+    <div class="grid">
+        <div class="testimonial">"Excelente servicio y rapidez"</div>
+        <div class="testimonial">"Muy recomendados, trabajo profesional"</div>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+    <h2>Solicitar Cotización</h2>
+    <p style="text-align:center;">📞 +502 51129362 | 📧 evanscutzaan@gmail.com</p>
+
+    <div class="form-container">
+
+        <form id="formulario">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="tel" name="telefono" placeholder="Teléfono" required>
+            <input type="email" name="email" placeholder="Correo" required>
+            <textarea name="mensaje" placeholder="¿Qué servicio necesitas?" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div id="mensajeExito" style="display:none; text-align:center;">
+            <h3>✅ Solicitud enviada</h3>
+            <p>Te contactaremos pronto</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2006 SEPRELSA - Todos los derechos reservados
+</footer>
+
+<a href="https://wa.me/50251129362?text=Hola,%20quiero%20una%20cotización" class="whatsapp" target="_blank">
+💬
+</a>
+
+<script>
+document.getElementById("formulario").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    fetch("https://formsubmit.co/ajax/evanscutzaan@gmail.com", {
+        method: "POST",
+        body: new FormData(this)
+    })
+    .then(res => res.json())
+    .then(() => {
+        document.getElementById("formulario").style.display = "none";
+        document.getElementById("mensajeExito").style.display = "block";
+    });
+});
+</script>
+
+</body>
+</html>
 <a href="https://wa.me/50251129362?text=Hola,%20quiero%20una%20cotización" class="whatsapp" target="_blank">
 💬
 </a>
