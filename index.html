@@ -1,159 +1,162 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEPRELSA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEPRELSA</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #eef3f7;
-        }
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #eef3f7;
+}
 
-        header {
-            background: linear-gradient(90deg, #0a4f8a, #0a7f3f);
-            color: white;
-            padding: 25px;
-            text-align: center;
-        }
+/* HERO */
+header {
+    background: linear-gradient(90deg, #0a4f8a, #0a7f3f);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
 
-        nav {
-            background-color: #083b66;
-            padding: 12px;
-            text-align: center;
-        }
+header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
 
-        nav a {
-            color: #ffffff;
-            margin: 12px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+header p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
 
-        nav a:hover {
-            color: #7ed957;
-        }
+.btn-main {
+    background: #25D366;
+    padding: 12px 25px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        section {
-            padding: 25px;
-        }
+.btn-main:hover {
+    background: #1ebe5d;
+}
 
-        h2 {
-            color: #0a4f8a;
-        }
+/* NAV */
+nav {
+    background-color: #083b66;
+    padding: 12px;
+    text-align: center;
+}
 
-        .card {
-            background: white;
-            padding: 18px;
-            margin: 15px 0;
-            border-radius: 10px;
-            border-left: 6px solid #0a7f3f;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-        }
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        .card h3 {
-            color: #083b66;
-        }
+/* SECCIONES */
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
 
-        footer {
-            background: linear-gradient(90deg, #0a4f8a, #0a7f3f);
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
+h2 {
+    text-align: center;
+    color: #0a4f8a;
+}
 
-        .btn {
-            display: inline-block;
-            background-color: #0a7f3f;
-            color: white;
-            padding: 10px 18px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 10px;
-            border: none;
-            cursor: pointer;
-        }
+/* CARDS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
 
-        .btn:hover {
-            background-color: #095c2e;
-        }
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #0a7f3f;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
 
-        .form-container {
-            background: white;
-            padding: 25px;
-            max-width: 450px;
-            margin: auto;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
+.card:hover {
+    transform: translateY(-5px);
+}
 
-        .form-group {
-            position: relative;
-            margin-bottom: 20px;
-        }
+/* FORM */
+.form-container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
 
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            outline: none;
-            font-size: 14px;
-        }
+.form-group {
+    margin-bottom: 15px;
+}
 
-        .form-group label {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            color: #777;
-            font-size: 14px;
-            transition: 0.3s;
-            background: white;
-            padding: 0 5px;
-        }
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
 
-        .form-group input:focus + label,
-        .form-group input:valid + label,
-        .form-group textarea:focus + label,
-        .form-group textarea:valid + label {
-            top: -8px;
-            left: 8px;
-            font-size: 12px;
-            color: #0a7f3f;
-        }
+textarea {
+    height: 100px;
+}
 
-        textarea {
-            height: 100px;
-            resize: none;
-        }
+button {
+    width: 100%;
+    background: #0a7f3f;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
 
-        .whatsapp {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25D366;
-            color: white;
-            font-size: 22px;
-            padding: 12px 16px;
-            border-radius: 50%;
-            text-decoration: none;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
+button:hover {
+    background: #095c2e;
+}
 
-        .whatsapp:hover {
-            background-color: #1ebe5d;
-        }
+/* FOOTER */
+footer {
+    background: #083b66;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
 
-    </style>
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    padding: 15px;
+    border-radius: 50%;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+}
+</style>
 </head>
+
 <body>
 
 <header>
     <h1>SEPRELSA</h1>
-    <p>Servicios Profesionales en Refrigeración, Electricidad y Mantenimiento</p>
+    <p>Refrigeración, Electricidad y Mantenimiento Profesional</p>
+    <a href="#contacto" class="btn-main">Solicitar Cotización</a>
 </header>
 
 <nav>
@@ -164,47 +167,41 @@
 
 <section id="servicios">
     <h2>Servicios</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>❄️ Aire Acondicionado</h3>
+            <p>Instalación y mantenimiento profesional.</p>
+        </div>
 
-    <div class="card">
-        <h3>❄️ Aire Acondicionado</h3>
-        <p>Instalación, mantenimiento y reparación de equipos A/C.</p>
+        <div class="card">
+            <h3>🧊 Refrigeración</h3>
+            <p>Cámaras, congeladores y vitrinas.</p>
+        </div>
+
+        <div class="card">
+            <h3>⚡ Electricidad</h3>
+            <p>Instalaciones seguras y eficientes.</p>
+        </div>
+
+        <div class="card">
+            <h3>🏗️ Obra Gris</h3>
+            <p>Remodelación y mantenimiento general.</p>
+        </div>
     </div>
-
-    <div class="card">
-        <h3>🧊 Refrigeración</h3>
-        <p>Servicio a cámaras refrigeradas, congeladores y vitrinas.</p>
-    </div>
-
-    <div class="card">
-        <h3>⚡ Electricidad</h3>
-        <p>Instalaciones eléctricas, diagnóstico y mantenimiento.</p>
-    </div>
-
-    <div class="card">
-        <h3>🏗️ Obra Gris</h3>
-        <p>Remodelaciones, cielo falso, pintura y mantenimiento general.</p>
-    </div>
-
 </section>
 
-<section id="nosotros">
-    <h2>Nosotros</h2>
-    <p>En SEPRELSA brindamos soluciones técnicas confiables para empresas y comercios.</p>
-
-    <h3>Misión</h3>
-    <p>Brindar servicios técnicos de alta calidad.</p>
-
-    <h3>Visión</h3>
-    <p>Ser una empresa líder en Guatemala.</p>
+<section>
+    <h2>¿Por qué elegirnos?</h2>
+    <div class="grid">
+        <div class="card">✔️ Atención rápida</div>
+        <div class="card">✔️ Trabajo garantizado</div>
+        <div class="card">✔️ Técnicos profesionales</div>
+    </div>
 </section>
 
 <section id="contacto">
     <h2>Contacto</h2>
-    <p>📍 Guatemala</p>
-    <p>📞 Tel: +502 51129362</p>
-    <p>📧 Correo: evanscutzaan@gmail.com</p>
-
-    <h3>Solicitar Cotización</h3>
+    <p style="text-align:center;">📞 +502 51129362 | 📧 evanscutzaan@gmail.com</p>
 
     <div class="form-container">
         <form action="https://formsubmit.co/evanscutzaan@gmail.com" method="POST">
@@ -213,37 +210,33 @@
             <input type="hidden" name="_captcha" value="false">
 
             <div class="form-group">
-                <input type="text" name="nombre" required>
-                <label>Nombre</label>
+                <input type="text" name="nombre" placeholder="Nombre" required>
             </div>
 
             <div class="form-group">
-                <input type="tel" name="telefono" required>
-                <label>Teléfono</label>
+                <input type="tel" name="telefono" placeholder="Teléfono" required>
             </div>
 
             <div class="form-group">
-                <input type="email" name="email" required>
-                <label>Correo</label>
+                <input type="email" name="email" placeholder="Correo" required>
             </div>
 
             <div class="form-group">
-                <textarea name="mensaje" required></textarea>
-                <label>¿Qué servicio necesitas?</label>
+                <textarea name="mensaje" placeholder="¿Qué servicio necesitas?" required></textarea>
             </div>
 
-            <button class="btn" type="submit">Enviar Cotización</button>
+            <button type="submit">Enviar Cotización</button>
 
         </form>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 SEPRELSA - Todos los derechos reservados</p>
+    © 2026 SEPRELSA - Todos los derechos reservados
 </footer>
 
-<a href="https://wa.me/50251129362" class="whatsapp" target="_blank">
-    💬
+<a href="https://wa.me/50251129362?text=Hola,%20quiero%20una%20cotización" class="whatsapp" target="_blank">
+💬
 </a>
 
 </body>
