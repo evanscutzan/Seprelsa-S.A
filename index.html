@@ -72,10 +72,63 @@
             border-radius: 5px;
             text-decoration: none;
             margin-top: 10px;
+            border: none;
+            cursor: pointer;
         }
 
         .btn:hover {
             background-color: #095c2e;
+        }
+
+        /* FORMULARIO PRO */
+        .form-container {
+            background: white;
+            padding: 25px;
+            max-width: 450px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .form-group label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #777;
+            font-size: 14px;
+            transition: 0.3s;
+            background: white;
+            padding: 0 5px;
+        }
+
+        .form-group input:focus + label,
+        .form-group input:valid + label,
+        .form-group textarea:focus + label,
+        .form-group textarea:valid + label {
+            top: -8px;
+            left: 8px;
+            font-size: 12px;
+            color: #0a7f3f;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
         }
 
         /* BOTÓN WHATSAPP */
@@ -138,29 +191,56 @@
 
 <section id="nosotros">
     <h2>Nosotros</h2>
-    <p>En SEPRELSA brindamos soluciones técnicas confiables para empresas y comercios, garantizando calidad y cumplimiento en cada proyecto.</p>
+    <p>En SEPRELSA brindamos soluciones técnicas confiables para empresas y comercios.</p>
 
     <h3>Misión</h3>
-    <p>Brindar servicios técnicos de alta calidad con eficiencia y responsabilidad.</p>
+    <p>Brindar servicios técnicos de alta calidad.</p>
 
     <h3>Visión</h3>
-    <p>Ser una empresa líder en servicios técnicos en Guatemala.</p>
+    <p>Ser una empresa líder en Guatemala.</p>
 </section>
 
 <section id="contacto">
     <h2>Contacto</h2>
     <p>📍 Guatemala</p>
-    <p>📞 Tel: +502 XXXXXXXX</p>
-    <p>📧 Correo: correo@ejemplo.com</p>
+    <p>📞 Tel: +502 51129362</p>
+    <p>📧 Correo:evanscutzaan@gmail.com</p>
 
-    <a class="btn" href="#">Solicitar Cotización</a>
+    <h3>Solicitar Cotización</h3>
+
+    <div class="form-container">
+        <form action="https://formsubmit.co/correo@ejemplo.com" method="POST">
+
+            <div class="form-group">
+                <input type="text" name="nombre" required>
+                <label>Nombre</label>
+            </div>
+
+            <div class="form-group">
+                <input type="tel" name="telefono" required>
+                <label>Teléfono</label>
+            </div>
+
+            <div class="form-group">
+                <input type="email" name="email" required>
+                <label>Correo</label>
+            </div>
+
+            <div class="form-group">
+                <textarea name="mensaje" required></textarea>
+                <label>¿Qué servicio necesitas?</label>
+            </div>
+
+            <button class="btn" type="submit">Enviar Cotización</button>
+
+        </form>
+    </div>
 </section>
 
 <footer>
     <p>© 2026 SEPRELSA - Todos los derechos reservados</p>
 </footer>
 
-<!-- BOTÓN WHATSAPP -->
 <a href="https://wa.me/50251129362" class="whatsapp" target="_blank">
     💬
 </a>
