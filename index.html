@@ -12,213 +12,6 @@ body {
     background-color: #eef3f7;
 }
 
-header {
-    background: linear-gradient(90deg, #0a4f8a, #0a7f3f);
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 40px;
-}
-
-.btn-main {
-    background: #25D366;
-    padding: 12px 25px;
-    border-radius: 6px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav {
-    background-color: #083b66;
-    padding: 12px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    margin: 10px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-section {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-h2 {
-    text-align: center;
-    color: #0a4f8a;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    border-left: 5px solid #0a7f3f;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.form-container {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    max-width: 500px;
-    margin: auto;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-textarea {
-    height: 100px;
-}
-
-button {
-    width: 100%;
-    background: #0a7f3f;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-button:hover {
-    background: #095c2e;
-}
-
-footer {
-    background: #083b66;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-
-.whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    padding: 15px;
-    border-radius: 50%;
-    color: white;
-    font-size: 22px;
-    text-decoration: none;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-    <h1>SEPRELSA</h1>
-    <p>Refrigeración, Electricidad y Mantenimiento Profesional</p>
-    <a href="#contacto" class="btn-main">Solicitar Cotización</a>
-</header>
-
-<nav>
-    <a href="#servicios">Servicios</a>
-    <a href="#contacto">Contacto</a>
-</nav>
-
-<section id="servicios">
-    <h2>Servicios</h2>
-    <div class="grid">
-        <div class="card">❄️ Aire Acondicionado</div>
-        <div class="card">🧊 Refrigeración</div>
-        <div class="card">⚡ Electricidad</div>
-        <div class="card">🏗️ Obra Gris</div>
-    </div>
-</section>
-
-<section>
-    <h2>¿Por qué elegirnos?</h2>
-    <div class="grid">
-        <div class="card">✔️ Atención rápida</div>
-        <div class="card">✔️ Trabajo garantizado</div>
-        <div class="card">✔️ Técnicos profesionales</div>
-    </div>
-</section>
-
-<section id="contacto">
-    <h2>Contacto</h2>
-    <p style="text-align:center;">📞 +502 51129362 | 📧 evanscutzaan@gmail.com</p>
-
-    <div class="form-container">
-
-        <form id="formulario">
-
-            <div class="form-group">
-                <input type="text" name="nombre" placeholder="Nombre" required>
-            </div>
-
-            <div class="form-group">
-                <input type="tel" name="telefono" placeholder="Teléfono" required>
-            </div>
-
-            <div class="form-group">
-                <input type="email" name="email" placeholder="Correo" required>
-            </div>
-
-            <div class="form-group">
-                <textarea name="mensaje" placeholder="¿Qué servicio necesitas?" required></textarea>
-            </div>
-
-            <button type="submit">Enviar Cotización</button>
-
-        </form>
-
-        <div id="mensajeExito" style="display:none; text-align:center; margin-top:20px;">
-            <h3 style="color:green;">✅ ¡Solicitud enviada!</h3>
-            <p>Te responderemos lo más pronto posible.</p>
-        </div>
-
-    </div>
-</section>
-
-<footer>
-    © 2026 SEPRELSA - Todos los derechos reservados
-</footer>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SEPRELSA</title>
-
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #eef3f7;
-}
-
 /* HERO */
 .hero {
     background: url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc') center/cover;
@@ -231,8 +24,10 @@ body {
 .hero::after {
     content: "";
     position: absolute;
-    top:0; left:0;
-    width:100%; height:100%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     background: rgba(0,0,0,0.5);
 }
 
@@ -242,12 +37,7 @@ body {
 }
 
 .hero h1 {
-    font-size: 42px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin: 15px 0;
+    font-size: 40px;
 }
 
 .btn-main {
@@ -256,14 +46,13 @@ body {
     border-radius: 6px;
     color: white;
     text-decoration: none;
-    font-weight: bold;
 }
 
 /* NAV */
 nav {
     background: #083b66;
-    text-align: center;
     padding: 12px;
+    text-align: center;
 }
 
 nav a {
@@ -291,7 +80,7 @@ h2 {
     gap: 20px;
 }
 
-/* CARD */
+/* CARDS */
 .card {
     background: white;
     padding: 20px;
@@ -302,7 +91,7 @@ h2 {
 }
 
 .card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
 }
 
 /* FORM */
@@ -326,14 +115,6 @@ button {
     background: #0a7f3f;
     color: white;
     border: none;
-}
-
-/* TESTIMONIOS */
-.testimonial {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    font-style: italic;
 }
 
 /* FOOTER */
@@ -364,12 +145,13 @@ footer {
 <!-- HERO -->
 <div class="hero">
     <div class="hero-content">
-        <h1>Expertos en Refrigeración y Electricidad</h1>
+        <h1>Expertos en Refrigeración, Aire acondicionado, Electricidad y Obra Civil </h1>
         <p>Soluciones rápidas, seguras y garantizadas en Guatemala</p>
         <a href="#contacto" class="btn-main">Solicitar Cotización</a>
     </div>
 </div>
 
+<!-- NAV -->
 <nav>
     <a href="#servicios">Servicios</a>
     <a href="#contacto">Contacto</a>
@@ -379,10 +161,10 @@ footer {
 <section id="servicios">
     <h2>Servicios</h2>
     <div class="grid">
-        <div class="card">❄️ Aire Acondicionado<br><small>Instalación y reparación</small></div>
-        <div class="card">🧊 Refrigeración<br><small>Cámaras y vitrinas</small></div>
-        <div class="card">⚡ Electricidad<br><small>Instalaciones seguras</small></div>
-        <div class="card">🏗️ Obra Gris<br><small>Mantenimiento general</small></div>
+        <div class="card">❄️ Aire Acondicionado</div>
+        <div class="card">🧊 Refrigeración</div>
+        <div class="card">⚡ Electricidad</div>
+        <div class="card">🏗️ Obra Gris</div>
     </div>
 </section>
 
@@ -391,21 +173,12 @@ footer {
     <h2>¿Por qué elegirnos?</h2>
     <div class="grid">
         <div class="card">✔️ Atención rápida</div>
-        <div class="card">✔️ Garantía en trabajos</div>
+        <div class="card">✔️ Trabajo garantizado</div>
         <div class="card">✔️ Técnicos profesionales</div>
     </div>
 </section>
 
-<!-- TESTIMONIOS -->
-<section>
-    <h2>Clientes satisfechos</h2>
-    <div class="grid">
-        <div class="testimonial">"Excelente servicio y rapidez"</div>
-        <div class="testimonial">"Muy recomendados, trabajo profesional"</div>
-    </div>
-</section>
-
-<!-- CONTACTO -->
+<!-- CONTACTO (ÚNICO FORMULARIO) -->
 <section id="contacto">
     <h2>Solicitar Cotización</h2>
     <p style="text-align:center;">📞 +502 51129362 | 📧 evanscutzaan@gmail.com</p>
@@ -417,7 +190,7 @@ footer {
             <input type="tel" name="telefono" placeholder="Teléfono" required>
             <input type="email" name="email" placeholder="Correo" required>
             <textarea name="mensaje" placeholder="¿Qué servicio necesitas?" required></textarea>
-            <button type="submit">Enviar</button>
+            <button type="submit">Enviar Cotización</button>
         </form>
 
         <div id="mensajeExito" style="display:none; text-align:center;">
@@ -428,14 +201,17 @@ footer {
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
     © 2006 SEPRELSA - Todos los derechos reservados
 </footer>
 
+<!-- WHATSAPP -->
 <a href="https://wa.me/50251129362?text=Hola,%20quiero%20una%20cotización" class="whatsapp" target="_blank">
 💬
 </a>
 
+<!-- SCRIPT -->
 <script>
 document.getElementById("formulario").addEventListener("submit", function(e) {
     e.preventDefault();
@@ -448,30 +224,8 @@ document.getElementById("formulario").addEventListener("submit", function(e) {
     .then(() => {
         document.getElementById("formulario").style.display = "none";
         document.getElementById("mensajeExito").style.display = "block";
-    });
-});
-</script>
-
-</body>
-</html>
-<a href="https://wa.me/50251129362?text=Hola,%20quiero%20una%20cotización" class="whatsapp" target="_blank">
-💬
-</a>
-
-<script>
-document.getElementById("formulario").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    fetch("https://formsubmit.co/ajax/evanscutzaan@gmail.com", {
-        method: "POST",
-        body: new FormData(this)
     })
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById("formulario").style.display = "none";
-        document.getElementById("mensajeExito").style.display = "block";
-    })
-    .catch(error => alert("Error al enviar"));
+    .catch(() => alert("Error al enviar"));
 });
 </script>
 
