@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEPRELSA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #eef3f7;
+        }
+
+        header {
+            background: linear-gradient(90deg, #0a4f8a, #0a7f3f);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #083b66;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            margin: 12px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #7ed957;
+        }
+
+        section {
+            padding: 25px;
+        }
+
+        h2 {
+            color: #0a4f8a;
+        }
+
+        .card {
+            background: white;
+            padding: 18px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border-left: 6px solid #0a7f3f;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: #083b66;
+        }
+
+        footer {
+            background: linear-gradient(90deg, #0a4f8a, #0a7f3f);
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #0a7f3f;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #095c2e;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>SEPRELSA</h1>
+    <p>Servicios Profesionales en Refrigeración, Electricidad y Mantenimiento</p>
+</header>
+
+<nav>
+    <a href="#servicios">Servicios</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<section id="servicios">
+    <h2>Servicios</h2>
+
+    <div class="card">
+        <h3>❄️ Aire Acondicionado</h3>
+        <p>Instalación, mantenimiento y reparación de equipos A/C.</p>
+    </div>
+
+    <div class="card">
+        <h3>🧊 Refrigeración</h3>
+        <p>Servicio a cámaras refrigeradas, congeladores y vitrinas.</p>
+    </div>
+
+    <div class="card">
+        <h3>⚡ Electricidad</h3>
+        <p>Instalaciones eléctricas, diagnóstico y mantenimiento.</p>
+    </div>
+
+    <div class="card">
+        <h3>🏗️ Obra Gris</h3>
+        <p>Remodelaciones, cielo falso, pintura y mantenimiento general.</p>
+    </div>
+
+</section>
+
+<section id="nosotros">
+    <h2>Nosotros</h2>
+    <p>En SEPRELSA brindamos soluciones técnicas confiables para empresas y comercios, garantizando calidad y cumplimiento en cada proyecto.</p>
+
+    <h3>Misión</h3>
+    <p>Brindar servicios técnicos de alta calidad con eficiencia y responsabilidad.</p>
+
+    <h3>Visión</h3>
+    <p>Ser una empresa líder en servicios técnicos en Guatemala.</p>
+</section>
+
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p>📍 Guatemala</p>
+    <p>📞 Tel: +502 XXXXXXXX</p>
+    <p>📧 Correo: correo@ejemplo.com</p>
+
+    <a class="btn" href="#">Solicitar Cotización</a>
+</section>
+
+<footer>
+    <p>© 2026 SEPRELSA - Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
