@@ -5,13 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SEPRELSA Guatemala</title>
 
-<link rel="icon" href="https://raw.githubusercontent.com/evanscutzan/Seprelsa-S.A/main/logo.png">
+<link rel="icon" href="logo.png">
 
 <style>
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     background-color: #eef3f7;
+    opacity: 0;
+    transition: opacity 0.8s ease;
 }
 
 /* HEADER PRO */
@@ -78,14 +80,36 @@ body {
     z-index: 2;
 }
 
+/* ANIMACIONES */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .logo {
     width: 130px;
     margin-bottom: 20px;
     filter: drop-shadow(0 5px 10px rgba(0,0,0,0.4));
+    animation: fadeUp 1s ease forwards;
+}
+
+.logo:hover {
+    transform: scale(1.08) rotate(2deg);
 }
 
 .hero h1 {
     font-size: 34px;
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.hero p {
+    animation: fadeUp 1.4s ease forwards;
 }
 
 .btn-main {
@@ -96,6 +120,7 @@ body {
     text-decoration: none;
     display: inline-block;
     margin-top: 15px;
+    animation: fadeUp 1.6s ease forwards;
 }
 
 /* SECTIONS */
@@ -191,7 +216,7 @@ footer {
 <!-- HEADER -->
 <div class="header">
     <div class="header-logo">
-        <img src="https://raw.githubusercontent.com/evanscutzan/Seprelsa-S.A/main/logo.png">
+        <img src="logo.png">
         SEPRELSA
     </div>
 
@@ -206,7 +231,7 @@ footer {
 <div class="hero">
     <div class="hero-content">
 
-        <img src="https://raw.githubusercontent.com/evanscutzan/Seprelsa-S.A/main/logo.png" class="logo">
+        <img src="logo.png" class="logo">
 
         <h1>Aire Acondicionado, Refrigeración y Electricidad</h1>
         <p>Atención inmediata en Guatemala • Garantía en todos los trabajos</p>
@@ -287,8 +312,12 @@ footer {
 💬
 </a>
 
-<!-- SCRIPT -->
+<!-- SCRIPTS -->
 <script>
+window.addEventListener("load", () => {
+    document.body.style.opacity = "1";
+});
+
 document.getElementById("formulario").addEventListener("submit", function(e) {
     e.preventDefault();
 
