@@ -234,6 +234,7 @@ footer {
     </div>
 
     <nav>
+        <a href="#sobre">Sobre Nosotros</a>
         <a href="#servicios">Servicios</a>
         <a href="#contacto">Contacto</a>
         <a href="https://wa.me/50251129362" target="_blank">WhatsApp</a>
@@ -249,7 +250,6 @@ footer {
         <h1>SEPRELSA</h1>
         <h1>Soluciones Técnicas Integrales para Hogares, Comercios e Industria</h1>
         <p>• Garantía y atención inmediata</p>
- 
 
         <a href="https://wa.me/50251129362?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20SEPRELSA" class="btn-main">
             Solicita Cotización Ahora
@@ -257,6 +257,22 @@ footer {
         
     </div>
 </div>
+
+<!-- SOBRE NOSOTROS -->
+<section id="sobre">
+    <h2>Sobre Nosotros</h2>
+
+    <p style="text-align: center; max-width: 800px; margin: auto;">
+        En <strong>SEPRELSA</strong>, somos una empresa especializada en brindar soluciones técnicas integrales 
+        para hogares, comercios e industria. Nos enfocamos en ofrecer servicios de alta calidad en instalación, 
+        mantenimiento y reparación de sistemas, garantizando eficiencia, seguridad y atención inmediata.
+    </p>
+
+    <p style="text-align: center; max-width: 800px; margin: 20px auto 0;">
+        Contamos con personal capacitado y comprometido con la satisfacción del cliente, ofreciendo soluciones 
+        confiables, rápidas y adaptadas a cada necesidad.
+    </p>
+</section>
 
 <!-- SERVICIOS -->
 <section id="servicios">
@@ -290,90 +306,5 @@ footer {
     <div class="card">
          🛠️ Herrería<br>
          ✔️ Diseño, fabricación e instalación de estructuras metálicas, portones y soldadura profesional
-        
-    </div>
-        
-</section>
-
-<!-- CONFIANZA -->
-<section>
-    <h2>¿Por qué elegirnos?</h2>
-    <div class="grid">
-        <div class="card">✔️ Atención rápida</div>
-        <div class="card">✔️ Garantía en todos los trabajos</div>
-        <div class="card">✔️ Técnicos profesionales</div>
     </div>
 </section>
-
-<!-- TESTIMONIOS -->
-<section>
-    <h2>Clientes Satisfechos</h2>
-    <div class="grid">
-        <div class="card">⭐⭐⭐⭐⭐ Excelente servicio, muy rápidos.</div>
-        <div class="card">⭐⭐⭐⭐⭐ Muy profesionales y responsables.</div>
-        <div class="card">⭐⭐⭐⭐⭐ Me solucionaron el problema el mismo día.</div>
-    </div>
-</section>
-
-<!-- CTA -->
-<div class="cta">
-    <h2>¿Necesitas ayuda urgente?</h2>
-    <p>Escríbenos ahora y recibe atención inmediata</p>
-    <a href="https://wa.me/50251129362?text=Necesito%20servicio%20urgente" class="btn-main">Contactar por WhatsApp</a>
-</div>
-
-<!-- CONTACTO -->
-<section id="contacto">
-    <h2>Solicitar Cotización</h2>
-    <p style="text-align:center;">📞 +502 51129362 | 📧 evanscutzaan@gmail.com</p>
-
-    <div class="form-container">
-        <form id="formulario">
-            <input type="text" name="nombre" placeholder="Nombre" required>
-            <input type="tel" name="telefono" placeholder="Teléfono" required>
-            <input type="email" name="email" placeholder="Correo" required>
-            <textarea name="mensaje" placeholder="¿Qué servicio necesitas?" required></textarea>
-            <button type="submit">Enviar Cotización</button>
-        </form>
-
-        <div id="mensajeExito" style="display:none; text-align:center;">
-            <h3>✅ Solicitud enviada</h3>
-            <p>Te contactaremos pronto</p>
-        </div>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    © 2026 SEPRELSA Guatemala - Todos los derechos reservados
-</footer>
-
-<!-- WHATSAPP -->
-<a href="https://wa.me/50251129362?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20SEPRELSA" class="whatsapp" target="_blank">
-💬
-</a>
-
-<!-- SCRIPTS -->
-<script>
-window.addEventListener("load", () => {
-    document.body.style.opacity = "1";
-});
-
-document.getElementById("formulario").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    fetch("https://formsubmit.co/ajax/evanscutzaan@gmail.com", {
-        method: "POST",
-        body: new FormData(this)
-    })
-    .then(res => res.json())
-    .then(() => {
-        document.getElementById("formulario").style.display = "none";
-        document.getElementById("mensajeExito").style.display = "block";
-    })
-    .catch(() => alert("Error al enviar"));
-});
-</script>
-
-</body>
-</html>
